@@ -1,0 +1,25 @@
+title: Suspicious PsExec-Like Remote Execution
+id: a1021abc-12a3-4ad5-a2f2-lateral-psexec
+status: experimental
+description: Detects usage of PsExec or similar tools used for lateral movement across Windows systems.
+author: Abhiraj Singh
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    Image|endswith:
+      - '\\psexec.exe'
+      - '\\wmic.exe'
+    CommandLine|contains:
+      - '\\ADMIN$'
+      - '\\C$'
+  condition: selection
+level: high
+tags:
+  - attack.lateral_movement
+  - attack.t1021.002
+falsepositives:
+  - Legitimate IT admin use of PsExec (monitor frequency & context)
+references:
+  - https://attack.mitre.org/techniques/T1021/002/
