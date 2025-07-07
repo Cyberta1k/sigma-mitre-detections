@@ -1,3 +1,7 @@
+![MITRE Coverage](https://img.shields.io/badge/MITRE%20Coverage-4%20Techniques-green)
+![Maintained](https://img.shields.io/badge/Maintained-Yes-brightgreen)
+![Status](https://img.shields.io/badge/Status-Active-blue)
+
 # Sigma Detection Rules by MITRE ATT&CK ID
 
 Curated Sigma rules written for real-world detection scenarios, aligned with MITRE ATT&CK techniques.
