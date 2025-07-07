@@ -1,0 +1,23 @@
+title: Registry Run Key Persistence
+id: 54c29901-94e9-4bc1-b29c-7f6a4b4f6154
+status: experimental
+description: Detects creation or modification of registry Run keys often abused for persistence.
+author: Abhiraj Singh
+references:
+  - https://attack.mitre.org/techniques/T1547/001/
+logsource:
+  category: registry_event
+  product: windows
+detection:
+  selection:
+    TargetObject|contains:
+      - '\\Software\\Microsoft\\Windows\\CurrentVersion\\Run'
+      - '\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce'
+    EventType: 'SetValue'
+  condition: selection
+level: high
+tags:
+  - attack.persistence
+  - attack.t1547.001
+falsepositives:
+  - Legitimate software adding autorun entries
