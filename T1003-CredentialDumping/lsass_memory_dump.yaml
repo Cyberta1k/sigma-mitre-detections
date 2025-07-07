@@ -1,0 +1,29 @@
+title: LSASS Memory Dump Attempt
+id: t1003-lsass-dump-001
+status: experimental
+description: Detects access to LSASS process memory via procdump, comsvcs.dll, or suspicious rundll32 calls.
+author: Abhiraj Singh
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection1:
+    Image|endswith: 
+      - '\\procdump.exe'
+    CommandLine|contains: 
+      - 'lsass.exe'
+  selection2:
+    Image|endswith:
+      - '\\rundll32.exe'
+    CommandLine|contains:
+      - 'comsvcs.dll, MiniDump'
+  condition: selection1 or selection2
+level: high
+tags:
+  - attack.credential_access
+  - attack.t1003.001
+falsepositives:
+  - Admin memory dumps (rare)
+references:
+  - https://attack.mitre.org/techniques/T1003/001/
+  - https://learn.microsoft.com/en-us/sysinternals/downloads/procdump
