@@ -19,5 +19,13 @@ Each folder = one MITRE technique. Inside: `.yaml` rule + brief explanation.
 ## 🤝 Contributions Welcome!
 Feel free to fork, adapt, or suggest use cases.
 
+
+## 🧭 MITRE ATT&CK Navigator Support
+
+You can visualize the techniques covered in this repo with MITRE Navigator.
+
+🔗 [Navigator Layer JSON](./mitre-navigator/abhiraj_sigma_mitre_layer.json)  
+🧭 Load this file in [MITRE ATT&CK Navigator](https://mitre-attack.github.io/attack-navigator/enterprise/) to see visual technique coverage.
+
 ---
 Maintained by [Abhiraj Singh](https://github.com/Cyberta1k)
