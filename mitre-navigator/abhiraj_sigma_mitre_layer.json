@@ -1,0 +1,87 @@
+{
+    "version": "4.5",
+    "name": "Abhiraj - Sigma Detection Coverage",
+    "description": "MITRE ATT&CK techniques covered by Abhiraj Singh in the sigma-mitre-detections GitHub repository.",
+    "domain": "enterprise-attack",
+    "techniques": [
+        {
+            "techniqueID": "T1059",
+            "score": 100,
+            "comment": "Covered in sigma-mitre-detections GitHub repo",
+            "color": "#33cc33"
+        },
+        {
+            "techniqueID": "T1059.001",
+            "score": 100,
+            "comment": "Covered in sigma-mitre-detections GitHub repo",
+            "color": "#33cc33"
+        },
+        {
+            "techniqueID": "T1547",
+            "score": 100,
+            "comment": "Covered in sigma-mitre-detections GitHub repo",
+            "color": "#33cc33"
+        },
+        {
+            "techniqueID": "T1547.001",
+            "score": 100,
+            "comment": "Covered in sigma-mitre-detections GitHub repo",
+            "color": "#33cc33"
+        },
+        {
+            "techniqueID": "T1021",
+            "score": 100,
+            "comment": "Covered in sigma-mitre-detections GitHub repo",
+            "color": "#33cc33"
+        },
+        {
+            "techniqueID": "T1021.002",
+            "score": 100,
+            "comment": "Covered in sigma-mitre-detections GitHub repo",
+            "color": "#33cc33"
+        },
+        {
+            "techniqueID": "T1003",
+            "score": 100,
+            "comment": "Covered in sigma-mitre-detections GitHub repo",
+            "color": "#33cc33"
+        },
+        {
+            "techniqueID": "T1003.001",
+            "score": 100,
+            "comment": "Covered in sigma-mitre-detections GitHub repo",
+            "color": "#33cc33"
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ffffff",
+            "#66ff66"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [
+        {
+            "label": "Covered by Sigma rule",
+            "color": "#33cc33"
+        }
+    ],
+    "metadata": [
+        {
+            "name": "Author",
+            "value": "Abhiraj Singh"
+        },
+        {
+            "name": "Date Generated",
+            "value": "2025-07-07"
+        },
+        {
+            "name": "Tool",
+            "value": "ChatGPT Navigator Layer Generator"
+        }
+    ],
+    "showTacticRowBackground": true,
+    "tacticRowBackground": "#dddddd",
+    "selectTechniquesAcrossTactics": true
+}
