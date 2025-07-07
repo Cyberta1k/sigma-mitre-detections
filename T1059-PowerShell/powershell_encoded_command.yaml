@@ -1,0 +1,23 @@
+title: Suspicious PowerShell Encoded Command
+id: 7d3d3d1a-567e-4ea2-ae3f-encoded-001
+status: experimental
+description: Detects PowerShell usage with -enc or -EncodedCommand, commonly used in attacks.
+author: Abhiraj Singh
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    CommandLine|contains:
+      - 'powershell -enc'
+      - 'powershell.exe -EncodedCommand'
+  condition: selection
+level: high
+tags:
+  - attack.execution
+  - attack.t1059.001
+  - detection.powershell
+falsepositives:
+  - Admin scripts using encoded PowerShell
+references:
+  - https://attack.mitre.org/techniques/T1059/001/
